@@ -7,8 +7,8 @@
 
 const CONFIG = {
     // WebSocket Configuration
-    // This is the address of our Python backend server
-    WEBSOCKET_URL: 'ws://localhost:8000/api/v1/game/ws',
+    // Backend URL from environment variable or default to localhost
+    WEBSOCKET_URL: window.ENV?.BACKEND_WS_URL || 'ws://localhost:8000/api/v1/game/ws',
 
     // Canvas Dimensions
     // NOTE: These will be synced from the backend game state

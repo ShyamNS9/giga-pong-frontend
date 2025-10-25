@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = "echo 'window.ENV = { BACKEND_WS_URL: \"'$BACKEND_WS_URL'\" };' > js/env.js"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

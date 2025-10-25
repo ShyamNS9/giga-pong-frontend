@@ -50,9 +50,12 @@
     <!--
         LOAD JAVASCRIPT FILES
         =====================
-        Order matters! Config must load first, then game.js
+        Order matters! env.js -> config.js -> game.js
     -->
-    <!-- Load configuration first -->
+    <!-- Load environment variables first -->
+    <script src="js/env.js"></script>
+
+    <!-- Load configuration -->
     <script src="js/config.js"></script>
 
     <!-- Load game logic -->
