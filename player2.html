@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game - Player 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-screen">
+    <!--
+        PLAYER 2 GAME SCREEN
+        ====================
+        This is where Player 2 plays the game
+        Nearly identical to player1.html except:
+        - Different player ID passed to startGame()
+        - Different controls shown
+    -->
+    <div class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <h1>🎮 Player 2</h1>
+            <!-- Connection status will be updated by JavaScript -->
+            <div id="connectionStatus" class="status">Status: Connecting...</div>
+        </div>
+
+        <!-- Controls Info -->
+        <div class="controls-info">
+            <p>Controls: <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> = Move in 2D space</p>
+            <button id="resetButton" class="reset-button">Reset Game</button>
+        </div>
+
+        <!-- The Canvas - This is our drawing board -->
+        <!--
+            CANVAS ELEMENT
+            ==============
+            Same canvas as player1.html
+            Both players see the SAME game state
+            The backend keeps everything in sync
+            Wrapped in a container for responsive scaling
+        -->
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <!-- Game Info -->
+        <div class="game-info">
+            <p>Waiting for both players to connect...</p>
+        </div>
+    </div>
+
+    <!--
+        LOAD JAVASCRIPT FILES
+        =====================
+        Order matters! Config must load first, then game.js
+    -->
+    <!-- Load configuration first -->
+    <script src="js/config.js"></script>
+
+    <!-- Load game logic -->
+    <script src="js/game.js"></script>
+
+    <!--
+        START THE GAME
+        ==============
+        This inline script runs when the page loads
+        It calls the startGame function from game.js with 'player2'
+
+        KEY DIFFERENCE from player1.html:
+        We pass 'player2' instead of 'player1'
+    -->
+    <script>
+        // When the page loads, start the game as player2
+        window.onload = () => {
+            startGame('player2');
+        };
+    </script>
+</body>
+</html>

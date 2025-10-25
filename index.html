@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game - Choose Player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--
+        LANDING PAGE
+        ============
+        This is the first page players see
+        They choose whether to join as Player 1 or Player 2
+    -->
+    <div class="container">
+        <h1>🏓 Multiplayer Pong Game</h1>
+
+        <div class="info-box">
+            <h2>How to Play</h2>
+            <ul>
+                <li><strong>Player 1:</strong> Use <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> keys to move your paddle in 2D space</li>
+                <li><strong>Player 2:</strong> Use <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> arrow keys to move your paddle in 2D space</li>
+                <li>Each player must open a separate browser tab/window</li>
+                <li>The game starts when both players are connected</li>
+            </ul>
+        </div>
+
+        <div class="player-selection">
+            <h2>Choose Your Player</h2>
+            <div class="button-container">
+                <!-- Button to join as Player 1 -->
+                <a href="player1.html" class="player-button player1-btn">
+                    Join as Player 1
+                </a>
+
+                <!-- Button to join as Player 2 -->
+                <a href="player2.html" class="player-button player2-btn">
+                    Join as Player 2
+                </a>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>⚠️ Important</h3>
+            <p>Make sure the Python backend server is running at <code>localhost:8000</code></p>
+        </div>
+    </div>
+</body>
+</html>
